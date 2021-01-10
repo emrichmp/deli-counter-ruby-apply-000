@@ -6,7 +6,6 @@ def line(katz_deli)
     else
       line_array = []
       counter = 1
-      #puts "The line is currently:"
       katz_deli.each do |guest|
         line_array.push("#{counter}. #{guest}")
       counter += 1
@@ -15,10 +14,14 @@ def line(katz_deli)
   end
 end
 
-def take_a_number(katz_deli, name)
-  katz_deli << name
-  line_num = katz_deli.length
-  puts "Welcome, #{name}. You are number #{line_num} in line."
+counter = 0
+
+def take_a_number()
+  #katz_deli << name
+  #line_num = katz_deli.length
+  #puts "Welcome, #{name}. You are number #{line_num} in line."
+  counter += 1
+  return counter
 end
 
 def now_serving(katz_deli)
@@ -31,10 +34,10 @@ else
 end
 end
 
-take_a_number(katz_deli, "Ada")
-take_a_number(katz_deli, "han")
-take_a_number(katz_deli, "indy")
-take_a_number(katz_deli, "vader")
+take_a_number(katz_deli, "Blade Runner")
+take_a_number(katz_deli, "Han Solo")
+take_a_number(katz_deli, "Indy")
+take_a_number(katz_deli, "Magneto")
 
 line(katz_deli)
 
@@ -42,7 +45,7 @@ now_serving(katz_deli)
 
 line(katz_deli)
 
-take_a_number(katz_deli, "mat")
+take_a_number(katz_deli, "Professor X")
 
 line(katz_deli)
 
